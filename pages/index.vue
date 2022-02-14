@@ -74,7 +74,7 @@
             </p>
             <a
               class="btn btn-primary mr-5"
-              href="/docs"
+              href="/"
               download="cv_Jesus_Rafael_Nava_Cruz.pdf"
               >Descargar CV</a
             >
