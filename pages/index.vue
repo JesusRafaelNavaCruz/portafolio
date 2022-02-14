@@ -39,18 +39,39 @@
             >
               Portafolio
             </a>
-            <a class="btn btn-ghost btn-sm rounded-btn"> Contact </a>
+            <!-- <a class="btn btn-ghost btn-sm rounded-btn"> Contact </a> -->
           </div>
         </div>
         <div class="navbar-end">
-          <button class="btn btn-square btn-ghost">
-            <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
-              <path
-                fill="currentColor"
-                d="M12,18C11.11,18 10.26,17.8 9.5,17.45C11.56,16.5 13,14.42 13,12C13,9.58 11.56,7.5 9.5,6.55C10.26,6.2 11.11,6 12,6A6,6 0 0,1 18,12A6,6 0 0,1 12,18M20,8.69V4H15.31L12,0.69L8.69,4H4V8.69L0.69,12L4,15.31V20H8.69L12,23.31L15.31,20H20V15.31L23.31,12L20,8.69Z"
-              />
-            </svg>
-          </button>
+          <div class="dropdown dropdown-end">
+            <div tabindex="0" class="btn btn-ghost rounded-btn">
+              <svg style="width: 24px; height: 24px" viewBox="0 0 24 24">
+                <path
+                  fill="currentColor"
+                  d="M12,18C11.11,18 10.26,17.8 9.5,17.45C11.56,16.5 13,14.42 13,12C13,9.58 11.56,7.5 9.5,6.55C10.26,6.2 11.11,6 12,6A6,6 0 0,1 18,12A6,6 0 0,1 12,18M20,8.69V4H15.31L12,0.69L8.69,4H4V8.69L0.69,12L4,15.31V20H8.69L12,23.31L15.31,20H20V15.31L23.31,12L20,8.69Z"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="
+                p-2
+                shadow
+                menu
+                dropdown-content
+                bg-base-content
+                text-bg-primary
+                rounded-box
+                w-52
+              "
+            >
+              <li v-for="(theme, index) in themes" :key="index">
+                <a :data-set-theme="theme" data-act-class="ACTIVECLASS">
+                  {{ theme }}
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -451,6 +472,7 @@
 </template>
 
 <script>
+import { themeChange } from "theme-change";
 export default {
   name: "IndexPage",
   data() {
@@ -526,7 +548,7 @@ export default {
         {
           title: "SUIM",
           description:
-            "Diseño y desarrollo de Front-end del Sistema Universal de Información Medica (SUIM)",
+            "Como desarrollador Front-end, creando el diseño del Sistema Universal de Información Médica, basado en el diseño AdminLTE, creado con componentes de Vuetify, utilizando también librerías y herramientas como Vuex, Axios (para el consumo de microservicios), SGV.js, Cornerstone (Para crear el visualizador de imagenes formato DICOM) y JWT para la seguridad del mismo",
           technology: [
             "HTML",
             "CSS",
@@ -543,6 +565,30 @@ export default {
           technology: ["HTML", "CSS", "Vuejs", "Nuxt", "Javascript", "DaisyUI"],
         },
       ],
+      themes: [
+        "light",
+        "dark",
+        "cupcake",
+        "bumblebee",
+        "emerald",
+        "corporate",
+        "synthwave",
+        "retro",
+        "cyberpunk",
+        "valentine",
+        "halloween",
+        "garden",
+        "forest",
+        "aqua",
+        "lofi",
+        "pastel",
+        "fantasy",
+        "wireframe",
+        "black",
+        "luxury",
+        "dracula",
+        "cmyk",
+      ],
     };
   },
   computed: {
@@ -550,6 +596,9 @@ export default {
       const currentYear = new Date();
       return currentYear.getFullYear();
     },
+  },
+  mounted() {
+    themeChange(false);
   },
 };
 </script>
