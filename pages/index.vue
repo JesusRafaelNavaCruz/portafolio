@@ -95,8 +95,8 @@
             </p>
             <a
               class="btn btn-primary mr-5"
-              href="/curriculum"
-              download="cv_Jesus_Rafael_Nava_Cruz.pdf"
+              href="/cv_Jesus_Rafael_Nava_Cruz.pdf"
+              download=""
               >Descargar CV</a
             >
             <button class="btn btn-outline" v-scroll-to="'#portfolio_section'">
