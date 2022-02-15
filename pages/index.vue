@@ -99,7 +99,7 @@
               download=""
               >Descargar CV</a
             >
-            <button class="btn btn-outline" v-scroll-to="'#portfolio_section'">
+            <button class="btn btn-outline btn-secondary" v-scroll-to="'#portfolio_section'">
               Portafolio
             </button>
           </div>
