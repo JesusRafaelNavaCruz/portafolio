@@ -58,6 +58,7 @@
                 p-2
                 shadow
                 menu
+                menu-compact
                 dropdown-content
                 text-bg-primary
                 rounded-box
@@ -66,9 +67,9 @@
               "
             >
               <li v-for="(theme, index) in themes" :key="index">
-                <a :data-set-theme="theme" data-act-class="ACTIVECLASS">
+                <button :data-set-theme="theme" data-act-class="active" class="rounded-btn">
                   {{ theme }}
-                </a>
+                </button>
               </li>
             </ul>
           </div>
