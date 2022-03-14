@@ -39,7 +39,12 @@
             >
               Portafolio
             </a>
-            <a class="btn btn-ghost btn-sm rounded-btn" v-scroll-to="'#contact_section'"> Contact </a>
+            <a
+              class="btn btn-ghost btn-sm rounded-btn"
+              v-scroll-to="'#contact_section'"
+            >
+              Contact
+            </a>
           </div>
         </div>
         <div class="navbar-end">
@@ -57,8 +62,7 @@
               class="
                 p-2
                 shadow
-                menu
-                menu-compact
+                menu menu-compact
                 dropdown-content
                 text-bg-primary
                 rounded-box
@@ -67,7 +71,11 @@
               "
             >
               <li v-for="(theme, index) in themes" :key="index">
-                <button :data-set-theme="theme" data-act-class="active" class="rounded-btn">
+                <button
+                  :data-set-theme="theme"
+                  data-act-class="active"
+                  class="rounded-btn"
+                >
                   {{ theme }}
                 </button>
               </li>
@@ -100,7 +108,10 @@
               download=""
               >Descargar CV</a
             >
-            <button class="btn btn-outline btn-secondary" v-scroll-to="'#portfolio_section'">
+            <button
+              class="btn btn-outline btn-secondary"
+              v-scroll-to="'#portfolio_section'"
+            >
               Portafolio
             </button>
           </div>
@@ -151,7 +162,11 @@
               del diseño.
             </p>
           </div>
-          <img src="/img/RAFA-min.png" alt="Jesus Rafael Profile Photo" />
+          <img
+            class="mask mask-squircle w-9/12"
+            src="/img/profile_img.jpg"
+            alt="Jesus Rafael Profile Photo"
+          />
         </div>
       </div>
 
@@ -435,7 +450,11 @@
           </p>
         </div>
         <div class="flex flex-wrap items-center justify-center">
-          <a href="mailto:jrnc9802@gmail.com" target="_blank" class="text-error mx-5">
+          <a
+            href="mailto:jrnc9802@gmail.com"
+            target="_blank"
+            class="text-error mx-5"
+          >
             <svg style="width: 50px; height: 50px" viewBox="0 0 24 24">
               <path
                 fill="currentColor"
@@ -443,7 +462,11 @@
               />
             </svg>
           </a>
-          <a href="https://twitter.com/el_rafinia" target="_blank" class="text-info mx-5">
+          <a
+            href="https://twitter.com/el_rafinia"
+            target="_blank"
+            class="text-info mx-5"
+          >
             <svg style="width: 50px; height: 50px" viewBox="0 0 24 24">
               <path
                 fill="currentColor"
@@ -451,7 +474,11 @@
               />
             </svg>
           </a>
-          <a href="https://www.instagram.com/el.rafinia/?hl=es-la" target="_blank" class="text-pink-600 mx-5">
+          <a
+            href="https://www.instagram.com/el.rafinia/?hl=es-la"
+            target="_blank"
+            class="text-pink-600 mx-5"
+          >
             <svg style="width: 50px; height: 50px" viewBox="0 0 24 24">
               <path
                 fill="currentColor"
@@ -459,7 +486,11 @@
               />
             </svg>
           </a>
-          <a href="https://wa.me/7772670869" target="_blank" class="text-green-500 mx-5">
+          <a
+            href="https://wa.me/7772670869"
+            target="_blank"
+            class="text-green-500 mx-5"
+          >
             <svg style="width: 50px; height: 50px" viewBox="0 0 24 24">
               <path
                 fill="currentColor"
@@ -597,9 +628,15 @@ export default {
         {
           company: "Erillam Healthcare",
           title: "Desarrollador Front-end",
-          years: "Mayo 2021 - Actualmente",
+          years: "Mayo 2021 - Marzo 2022",
           description:
             "Diseño, creación e implemetación del sistema SUIM (Sistema Universal de Información Médica)",
+        },
+        {
+          company: "CloudAppi LATAM",
+          title: "Desarrollador Front-end",
+          years: "Marzo 2022 - Actualmente",
+          description: "Desarrollador de Front-end",
         },
       ],
       awards: [
