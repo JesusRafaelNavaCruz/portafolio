@@ -180,6 +180,34 @@
           <div class="divider w-48 mt-0"></div>
         </div>
 
+
+        <div
+          class="
+            grid grid-cols-1
+            lg:grid-cols-3
+            px-0
+            md:px-3
+            gap-x-10 gap-y-4
+            mb-10
+            justify-items-center
+            content-center
+          "
+        >
+          <div v-for="(skill, index) in importantSkills" :key="index">
+            <div>
+              <div class="w-100">
+                <component :is="skill.icon" class="h-24"></component>
+              </div>
+              <div class='text-2xl font-bold tracking-wide text-center py-2'>
+                <p>{{skill.name}}</p>
+              </div>              
+              <div class='text-lg font-medium font-mono tracking-tight text-center'>
+                <p>{{skill.level}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div
           class="
             grid grid-cols-1
@@ -210,6 +238,22 @@
             </div>
           </div>
         </div>
+
+        <div
+          class="
+            grid grid-cols-1
+            lg:grid-cols-1
+            px-0
+            md:px-3
+            gap-x-10 gap-y-4
+            mb-10
+            justify-items-center
+            content-center
+          "
+        >
+          <a href="https://app.flyncer.com/cv/d371cfc7-fe16-4681-960b-afd18a353b59" target="_blank" class="btn btn-primary btn-lg">Ver más</a>
+        </div>
+
       </div>
 
       <div class="container mb-5">
@@ -587,10 +631,23 @@
 
 <script>
 import { themeChange } from "theme-change";
+import JsLogo from "~/components/logos/JsLogo.vue";
+import VueLogo from "~/components/logos/VueLogo.vue";
+import HtmlLogo from "~/components/logos/HtmlLogo.vue";
 export default {
   name: "IndexPage",
+  components: {
+    JsLogo,
+    VueLogo,
+    HtmlLogo,
+  },
   data() {
     return {
+      importantSkills: [
+        { name: 'Javascript', level: 'Intermedio', icon: 'JsLogo'},
+        { name: 'Vue', level: 'Experto', icon: 'VueLogo'},
+        { name: 'HTML y CSS', level: 'Intermedio', icon: 'HtmlLogo'},
+      ],
       skills: [
         { name: "Vuejs", progress: "90%", icon: "" },
         { name: "NodeJs", progress: "60%", icon: "" },
