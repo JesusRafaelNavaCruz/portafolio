@@ -133,6 +133,8 @@
             lg:grid-cols-2
             px-0
             md:px-3
+            sm:px-10
+            xs:px-5
             gap-10
             items-center
             justify-items-center
@@ -187,6 +189,8 @@
             lg:grid-cols-3
             px-0
             md:px-3
+            sm:px-10
+            xs:px-5
             gap-x-10 gap-y-4
             mb-10
             justify-items-center
@@ -214,6 +218,8 @@
             lg:grid-cols-2
             px-0
             md:px-3
+            sm:px-10
+            xs:px-5
             gap-x-10 gap-y-4
             mb-10
           "
@@ -245,6 +251,8 @@
             lg:grid-cols-1
             px-0
             md:px-3
+            sm:px-10
+            xs:px-5
             gap-x-10 gap-y-4
             mb-10
             justify-items-center
@@ -270,6 +278,8 @@
             lg:grid-cols-2
             px-0
             md:px-3
+            sm:px-10
+            xs:px-5
             gap-x-10 gap-y-4
             mb-10
           "
@@ -318,6 +328,8 @@
             lg:grid-cols-2
             px-0
             md:px-3
+            sm:px-10
+            xs:px-5
             gap-x-10 gap-y-4
             mb-10
           "
@@ -367,6 +379,8 @@
             lg:grid-cols-2
             px-0
             md:px-3
+            sm:px-10
+            xs:px-5
             gap-x-10 gap-y-4
             mb-10
           "
@@ -396,13 +410,13 @@
     </section>
 
     <!-- Portafolio -->
-    <section class="bg-base-content pb-10" id="portfolio_section">
+    <section class="pb-10" id="portfolio_section">
       <div class="container">
         <div class="text-center flex flex-col justify-center items-center">
-          <h1 class="text-4xl font-bold pt-10 text-primary" id="about_section">
+          <h1 class="text-4xl font-bold pt-10" id="about_section">
             Portafolio
           </h1>
-          <div class="bg-primary h-1 w-48 mt-0 mb-10"></div>
+          <div class="divider h-1 w-48 mt-0 mb-10"></div>
         </div>
 
         <div
@@ -411,6 +425,8 @@
             lg:grid-cols-3
             px-0
             md:px-3
+            sm:px-10
+            xs:px-5
             gap-x-10 gap-y-4
             mb-10
           "
@@ -470,12 +486,19 @@
         </div>
       </div>
 
-      <div class="container" id="contact_section">
+      <div 
+        class="
+          container             
+          md:px-3
+          sm:px-10
+          xs:px-5" 
+          id="contact_section"
+      >
         <div class="text-center flex flex-col justify-center items-center">
-          <h1 class="text-4xl font-bold pt-10 text-primary" id="about_section">
+          <h1 class="text-4xl font-bold pt-10" id="about_section">
             Contacto
           </h1>
-          <div class="bg-primary h-1 w-48 mt-0 mb-10"></div>
+          <div class="divider h-1 w-48 mt-0 mb-10"></div>
         </div>
 
         <div class="text-center">
@@ -544,6 +567,7 @@
           </a>
         </div>
       </div>
+
     </section>
 
     <!-- Footer -->
@@ -649,18 +673,16 @@ export default {
         { name: 'HTML y CSS', level: 'Intermedio', icon: 'HtmlLogo'},
       ],
       skills: [
-        { name: "Vuejs", progress: "90%", icon: "" },
-        { name: "NodeJs", progress: "60%", icon: "" },
-        { name: "Flutter", progress: "10%", icon: "" },
-        { name: "Angular", progress: "20%", icon: "" },
-        { name: "HTML5", progress: "100%", icon: "" },
-        { name: "CSS", progress: "80%", icon: "" },
-        { name: "JavaScript", progress: "90%", icon: "" },
-        { name: "Axios", progress: "10%", icon: "" },
-        { name: "API Rest", progress: "60%", icon: "" },
-        { name: "VS Code", progress: "80%", icon: "" },
-        { name: "Docker", progress: "10%", icon: "" },
-        { name: "PWA", progress: "10%", icon: "" },
+        { name: "VueJs", progress: "100%", icon: "" },
+        { name: "ReactJs", progress: "40%", icon: "" },
+        { name: "JavaScript", progress: "70%", icon: "" },
+        { name: "HTML", progress: "70%", icon: "" },
+        { name: "CSS", progress: "70%", icon: "" },
+        { name: "SCSS", progress: "70%", icon: "" },
+        { name: "Strapi", progress: "60%", icon: "" },
+        { name: "NestJS", progress: "20%", icon: "" },
+        { name: "VS Code", progress: "100%", icon: "" },
+        { name: "Git", progress: "60%", icon: "" },
       ],
       educations: [
         {
@@ -706,6 +728,11 @@ export default {
           title: "SUIM",
           description:
             "Creación e implementación del Sistema Universal de Información Médica",
+        },
+        {
+          title: "Developer Portal SURA",
+          description:
+            "Creación de front-end del developer portal para Seguros SURA México",
         },
       ],
       projects: [
@@ -755,6 +782,22 @@ export default {
           technology: ["HTML", "CSS", "Vuejs", "Javascript"],
           urls: [
             { web: "https://determined-meitner-b8cd1f.netlify.app", repo: "" },
+          ],
+        },
+        {
+          title: "Slider Nativo",
+          description: "Slider nativo creado con CSS puro sin librerías y con el framework de VueJs consumiendo RickAndMortyAPI",
+          technology: ["HTML", "CSS", "Vuejs", "Javascript"],
+          urls: [
+            { web: "https://codesandbox.io/s/slider-native-uvj69h", repo: "" },
+          ],
+        },
+        {
+          title: "Developer Portal Seguros SURA",
+          description: "Creación de ApiMarket para el developer portal de Seguros SURA México",
+          technology: ["HTML", "CSS", "ReactJS", "Strapi"],
+          urls: [
+            { web: "https://www.segurossura.com.mx/", repo: "" },
           ],
         },
       ],
