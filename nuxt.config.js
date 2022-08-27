@@ -66,18 +66,21 @@ export default {
     [
       '@nuxtjs/i18n',
       {
-        locales: ['en', 'es'],
-        defaultLocale: 'en',
+        locales: [
+          {
+            code: 'en',
+            file: 'en-US.js',
+          },
+          {
+            code: 'es',
+            file: 'es-ES.js',
+          },
+        ],
+        lazy: true,
+        langDir: 'lang/',
+        defaultLocale: 'es',
         vueI18n: {
-          fallbackLocale: 'en',
-          messages: {
-            en: {
-              greeting: 'Hello world!'
-            },
-            es: {
-              greeting: '¡Hola mundo!'
-            }
-          }
+          fallbackLocale: 'es',
         }
       }
     ]
