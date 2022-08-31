@@ -158,7 +158,7 @@
           class="text-center flex flex-col justify-center items-center mb-10"
         >
           <h1 class="text-4xl font-bold pt-10" id="about_section">
-            Habilidades
+            {{ $t('skills.title') }}
           </h1>
           <div class="divider w-48 mt-0"></div>
         </div>
@@ -240,7 +240,7 @@
             content-center
           "
         >
-          <a href="https://app.flyncer.com/cv/d371cfc7-fe16-4681-960b-afd18a353b59" target="_blank" class="btn btn-primary btn-lg">Ver más</a>
+          <a href="https://app.flyncer.com/cv/d371cfc7-fe16-4681-960b-afd18a353b59" target="_blank" class="btn btn-primary btn-lg">{{ $t('skills.btnMore')}}</a>
         </div>
 
       </div>
@@ -249,7 +249,7 @@
         <div
           class="text-center flex flex-col justify-center items-center mb-10"
         >
-          <h1 class="text-4xl font-bold pt-10" id="about_section">Educación</h1>
+          <h1 class="text-4xl font-bold pt-10" id="about_section">{{ $t('education.title') }}</h1>
           <div class="divider w-48 mt-0"></div>
         </div>
 
@@ -283,10 +283,10 @@
               </svg>
               <h1 class="text-3xl mb-2">{{ education.title }}</h1>
               <p class="text-base">
-                Escuela: <span>{{ education.school }}</span>
+                {{ $t('education.school') }}: <span>{{ education.school }}</span>
               </p>
               <p class="text-base">
-                Graduado: <span>{{ education.graduated }}</span>
+                {{ $t('education.graduate') }}: <span>{{ education.graduated }}</span>
               </p>
             </div>
           </div>
@@ -298,7 +298,7 @@
           class="text-center flex flex-col justify-center items-center mb-10"
         >
           <h1 class="text-4xl font-bold pt-10" id="about_section">
-            Experiencia
+            {{ $t('experience.title') }}
           </h1>
           <div class="divider w-48 mt-0"></div>
         </div>
@@ -333,13 +333,13 @@
               </svg>
               <h1 class="text-3xl mb-2">{{ experience.title }}</h1>
               <p class="text-base">
-                Compañia: <span>{{ experience.company }}</span>
+                {{ $t('experience.place') }}: <span>{{ experience.company }}</span>
               </p>
               <p class="text-base">
-                Periodo: <span>{{ experience.years }}</span>
+                {{ $t('experience.period') }}: <span>{{ experience.years }}</span>
               </p>
               <p class="text-base">
-                Descripción: <span>{{ experience.description }}</span>
+                {{ $t('experience.description') }}: <span>{{ experience.description }}</span>
               </p>
             </div>
           </div>
@@ -350,7 +350,7 @@
         <div
           class="text-center flex flex-col justify-center items-center mb-10"
         >
-          <h1 class="text-4xl font-bold pt-10" id="about_section">Logros</h1>
+          <h1 class="text-4xl font-bold pt-10" id="about_section">{{ $t('achievements.title') }}</h1>
           <div class="divider w-48 mt-0"></div>
         </div>
 
@@ -395,7 +395,7 @@
       <div class="container">
         <div class="text-center flex flex-col justify-center items-center">
           <h1 class="text-4xl font-bold pt-10" id="about_section">
-            Portafolio
+            {{ $t('portfolio.title') }}
           </h1>
           <div class="divider h-1 w-48 mt-0 mb-10"></div>
         </div>
@@ -477,24 +477,20 @@
       >
         <div class="text-center flex flex-col justify-center items-center">
           <h1 class="text-4xl font-bold pt-10" id="about_section">
-            Contacto
+            {{ $t('contact.title') }}
           </h1>
           <div class="divider h-1 w-48 mt-0 mb-10"></div>
         </div>
 
         <div class="text-center">
           <h1 class="text-3xl text-primary font-bold mb-5">
-            ¿Necesitas ayuda para tus proyectos?
+            {{ $t('contact.content') }}
           </h1>
           <p class="text-lg text-primary font-semibold">
-            ¡Buscas un desarrollador front-end para construir tus aplicaciones o
-            sitios web?
+            {{ $t('contact.subcontent') }}
           </p>
           <p class="text-lg text-primary font-semibold mb-5">
-            Puedes contactarme por
-            <span class="font-bold">correo electrónico</span>,
-            <span class="font-bold">redes sociales</span> y
-            <span class="font-bold">Whatsapp</span> que te dejo aqui abajo
+            {{ $t('contact.end') }}
           </p>
         </div>
         <div class="flex flex-wrap items-center justify-center">
@@ -562,8 +558,7 @@
             />
           </svg>
           <p>
-            Jesus Nava | Copyright © {{ currentDate }} - Todos los derechos
-            reservados
+            Jesus Nava | Copyright © {{ currentDate }} - {{ $t('footer.rights') }}
           </p>
         </div>
         <div
@@ -649,9 +644,9 @@ export default {
   data() {
     return {
       importantSkills: [
-        { name: 'Javascript', level: 'Intermedio', icon: 'JsLogo'},
-        { name: 'Vue', level: 'Experto', icon: 'VueLogo'},
-        { name: 'HTML y CSS', level: 'Intermedio', icon: 'HtmlLogo'},
+        { name: 'Javascript', level: this.$i18n.t('skills.levelMedium'), icon: 'JsLogo'},
+        { name: 'Vue', level: this.$i18n.t('skills.levelExpert'), icon: 'VueLogo'},
+        { name: 'HTML y CSS', level: this.$i18n.t('skills.levelMedium'), icon: 'HtmlLogo'},
       ],
       skills: [
         { name: "VueJs", progress: "100%", icon: "" },
