@@ -63,6 +63,27 @@ export default {
       x: false,
       y: true
     }],
+    [
+      '@nuxtjs/i18n',
+      {
+        locales: [
+          {
+            code: 'en',
+            file: 'en-US.js',
+          },
+          {
+            code: 'es',
+            file: 'es-ES.js',
+          },
+        ],
+        lazy: true,
+        langDir: 'lang/',
+        defaultLocale: 'es',
+        vueI18n: {
+          fallbackLocale: 'es',
+        }
+      }
+    ]
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
