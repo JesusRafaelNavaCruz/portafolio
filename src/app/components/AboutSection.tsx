@@ -1,26 +1,26 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from "react"
-import Image from "next/image"
+import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export default function AboutSection() {
-  const [isVisible, setIsVisible] = useState(false)
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true)
+          setIsVisible(true);
         }
       },
-      { threshold: 0.3 },
-    )
+      { threshold: 0.3 }
+    );
 
-    const element = document.getElementById("about")
-    if (element) observer.observe(element)
+    const element = document.getElementById("about");
+    if (element) observer.observe(element);
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
   const skills = [
     "JavaScript",
@@ -29,16 +29,13 @@ export default function AboutSection() {
     "Next.js",
     "Tailwind CSS",
     "Node.js",
-    "Python",
     "PostgreSQL",
     "MongoDB",
-    "AWS",
-    "Docker",
     "Git",
-  ]
+  ];
 
   return (
-    <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 relative">
+    <section id="aboutme" className="py-20 px-4 sm:px-6 lg:px-8 relative">
       <div className="max-w-6xl mx-auto">
         <div
           className={`transition-all duration-1000 ${
@@ -46,14 +43,18 @@ export default function AboutSection() {
           }`}
         >
           <h2 className="text-4xl sm:text-5xl font-bold text-center mb-16">
-            <span className="bg-gradient-to-r from-[#22D3EE] to-[#8B5CF6] bg-clip-text text-transparent">About Me</span>
+            <span className="bg-gradient-to-r from-[#22D3EE] to-[#8B5CF6] bg-clip-text text-transparent">
+              Sobre me
+            </span>
           </h2>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Profile Image */}
             <div
               className={`transition-all duration-1000 delay-300 ${
-                isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
+                isVisible
+                  ? "opacity-100 translate-x-0"
+                  : "opacity-0 -translate-x-10"
               }`}
             >
               <div className="relative group">
@@ -72,24 +73,34 @@ export default function AboutSection() {
             {/* About Content */}
             <div
               className={`transition-all duration-1000 delay-500 ${
-                isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
+                isVisible
+                  ? "opacity-100 translate-x-0"
+                  : "opacity-0 translate-x-10"
               }`}
             >
               <div className="space-y-6">
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  I'm a passionate frontend developer with over 5 years of experience creating digital experiences that
-                  users love. My journey began with a curiosity about how websites work, and it has evolved into a deep
-                  passion for crafting intuitive, accessible, and performant web applications.
+                  Soy un apasionadodesarrollador Frontend con experiencia en la
+                  creación de interfaces modernas y funcionales. Trabajo con
+                  JavaScript, React, Vue, Nuxt.js, Tailwind CSS y Node.js,
+                  aplicando buenas prácticas para lograr proyectos escalables y
+                  de alto rendimiento.
                 </p>
 
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  When I'm not coding, you'll find me exploring new design trends, contributing to open-source projects,
-                  or sharing knowledge with the developer community. I believe in the power of clean code, thoughtful
-                  design, and continuous learning.
+                  Puedo ayudarte a llevar tus ideas digitales a la realidad, ya
+                  sea que busques un sitio web atractivo y responsivo, una
+                  interfaz escalable para tu producto o una experiencia que
+                  mejore la interacción con tus usuarios. Mi enfoque está en
+                  crear soluciones funcionales y visualmente consistentes,
+                  aportando valor tanto a equipos de desarrollo como a clientes
+                  que necesitan resultados confiables y de calidad.
                 </p>
 
                 <div className="pt-6">
-                  <h3 className="text-xl font-semibold text-[#22D3EE] mb-4">Skills & Technologies</h3>
+                  <h3 className="text-xl font-semibold text-[#22D3EE] mb-4">
+                    Habilidades y Técnologías
+                  </h3>
                   <div className="flex flex-wrap gap-3">
                     {skills.map((skill, index) => (
                       <span
@@ -110,5 +121,5 @@ export default function AboutSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

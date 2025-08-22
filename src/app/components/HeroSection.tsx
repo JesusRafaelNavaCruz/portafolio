@@ -18,7 +18,7 @@ export default function HeroSection() {
   };
   return (
     <section
-      id="hero"
+      id="home"
       className="relative min-h-screen flex items-center justify-center overflow-hidden py-20"
     >
       {/* Animated Background Elements */}

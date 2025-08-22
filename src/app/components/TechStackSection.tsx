@@ -58,7 +58,7 @@ export default function TechStackSection() {
   ];
 
   return (
-    <section id="tech" className="py-20 px-4 sm:px-6 lg:px-8">
+    <section id="techstack" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         <div
           className={`transition-all duration-1000 ${
