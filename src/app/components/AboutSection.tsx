@@ -59,12 +59,12 @@ export default function AboutSection() {
             >
               <div className="relative group">
                 <div className="absolute -inset-4 bg-gradient-to-r from-[#22D3EE] to-[#8B5CF6] rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-1000"></div>
-                <div className="relative w-64 h-64 md:w-full md:h-[550px]">
+                <div className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-[550px] lg:w-full lg:aspect-[3/4] mx-auto">
                   <Image
                     src="/assets/profile-photo.png"
                     alt="Jesus Nava"
                     fill
-                    className="rounded-2xl shadow-2xl group-hover:scale-105 transition-transform duration-500"
+                    className="rounded-2xl shadow-2xl group-hover:scale-105 transition-transform duration-500 object-cover"
                   />
                 </div>
               </div>

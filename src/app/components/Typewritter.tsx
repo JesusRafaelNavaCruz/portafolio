@@ -19,7 +19,7 @@ export default function FlipText({ words, interval = 6000 }: FlipTextProps) {
   }, [words.length, interval]);
 
   return (
-    <div className="relative py-10 flex items-center justify-center overflow-hidden">
+    <div className="relative py-5 flex items-center justify-center overflow-visible leading-[1.2]">
       <AnimatePresence mode="wait">
         <motion.div
           key={index}
@@ -27,7 +27,7 @@ export default function FlipText({ words, interval = 6000 }: FlipTextProps) {
           animate={{ rotateX: 0, opacity: 1 }}
           exit={{ rotateX: -90, opacity: 0 }}
           transition={{ duration: 0.6, ease: "easeInOut" }}
-          className="absolute font-bold bg-gradient-to-r from-[#22D3EE] via-[#8B5CF6] to-[#22D3EE] bg-clip-text text-transparent"
+          className="inline-block font-bold bg-gradient-to-r from-[#22D3EE] via-[#8B5CF6] to-[#22D3EE] bg-clip-text text-transparent leading-[1.2]"
         >
           {words[index]}
         </motion.div>

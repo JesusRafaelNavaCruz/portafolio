@@ -103,7 +103,7 @@ export default function TechStackSection() {
           </div>
 
           {/* Category Pills */}
-          <div
+          {/* <div
             className={`flex flex-wrap justify-center gap-3 transition-all duration-1000 delay-500 ${
               isVisible
                 ? "opacity-100 translate-y-0"
@@ -123,7 +123,7 @@ export default function TechStackSection() {
                 {category}
               </span>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
