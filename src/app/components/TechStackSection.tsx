@@ -17,7 +17,7 @@ export default function TechStackSection() {
       { threshold: 0.3 }
     );
 
-    const element = document.getElementById("tech");
+    const element = document.getElementById("techstack");
     if (element) observer.observe(element);
 
     return () => observer.disconnect();
@@ -67,12 +67,11 @@ export default function TechStackSection() {
         >
           <h2 className="text-4xl sm:text-5xl font-bold text-center mb-4">
             <span className="bg-gradient-to-r from-[#22D3EE] to-[#8B5CF6] bg-clip-text text-transparent">
-              Tech Stack
+              Stack Tecnológico
             </span>
           </h2>
           <p className="text-gray-400 text-center mb-16 max-w-2xl mx-auto">
-            Technologies and tools I use to bring ideas to life and create
-            exceptional digital experiences.
+            Este es el conjunto de tecnologías que utilizo para dar vida a mis proyectos.
           </p>
 
           {/* Tech Grid */}

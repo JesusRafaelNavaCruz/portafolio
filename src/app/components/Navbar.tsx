@@ -10,7 +10,7 @@ export default function Navbar() {
   const navBarItems = [
     { name: "Inicio", id: "home" },
     { name: "Sobre mí", id: "aboutme" },
-    { name: "Proyectos", id: "projects" },
+    { name: "Portafolio", id: "projects" },
     { name: "Stack", id: "techstack" },
     { name: "Contacto", id: "contact" },
   ];

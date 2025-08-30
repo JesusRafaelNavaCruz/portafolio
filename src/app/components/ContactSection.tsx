@@ -3,7 +3,7 @@
 import type React from "react"
 
 import { useEffect, useState } from "react"
-import { Send, Github, Linkedin, Mail, MapPin, Phone } from "lucide-react"
+import { Send, Github, Linkedin, Mail, MapPin, Phone, Twitter, Instagram } from "lucide-react"
 
 export default function ContactSection() {
   const [isVisible, setIsVisible] = useState(false)
@@ -54,11 +54,11 @@ export default function ContactSection() {
         >
           <h2 className="text-4xl sm:text-5xl font-bold text-center mb-4">
             <span className="bg-gradient-to-r from-[#22D3EE] to-[#8B5CF6] bg-clip-text text-transparent">
-              Let's Work Together
+              ¿Listo para empezar?
             </span>
           </h2>
           <p className="text-gray-400 text-center mb-16 max-w-2xl mx-auto">
-            Have a project in mind? I'd love to hear about it. Let's discuss how we can bring your ideas to life.
+            Si buscas un desarrollador que dé vida a tus ideas, estoy aquí para escucharte.
           </p>
 
           <div className="grid lg:grid-cols-2 gap-12">
@@ -68,7 +68,7 @@ export default function ContactSection() {
                 isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
               }`}
             >
-              <h3 className="text-2xl font-bold text-white mb-8">Get In Touch</h3>
+              <h3 className="text-2xl font-bold text-white mb-8">Contacto</h3>
 
               <div className="space-y-6 mb-8">
                 <div className="flex items-center space-x-4">
@@ -77,7 +77,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <p className="text-gray-400 text-sm">Email</p>
-                    <p className="text-white">alex.chen@example.com</p>
+                    <p className="text-white">jesusrafaelnavacruz@gmail.com</p>
                   </div>
                 </div>
 
@@ -86,8 +86,8 @@ export default function ContactSection() {
                     <Phone className="text-[#8B5CF6]" size={20} />
                   </div>
                   <div>
-                    <p className="text-gray-400 text-sm">Phone</p>
-                    <p className="text-white">+1 (555) 123-4567</p>
+                    <p className="text-gray-400 text-sm">Teléfono</p>
+                    <p className="text-white">+52 (777) 914-04-67</p>
                   </div>
                 </div>
 
@@ -96,20 +96,21 @@ export default function ContactSection() {
                     <MapPin className="text-[#22D3EE]" size={20} />
                   </div>
                   <div>
-                    <p className="text-gray-400 text-sm">Location</p>
-                    <p className="text-white">San Francisco, CA</p>
+                    <p className="text-gray-400 text-sm">Ubicación</p>
+                    <p className="text-white">Cuernavaca, Morelos, México</p>
                   </div>
                 </div>
               </div>
 
               {/* Social Links */}
               <div>
-                <h4 className="text-lg font-semibold text-white mb-4">Follow Me</h4>
+                <h4 className="text-lg font-semibold text-white mb-4">Sígueme</h4>
                 <div className="flex space-x-4">
                   {[
                     { icon: Github, href: "#", label: "GitHub", color: "hover:text-gray-300" },
                     { icon: Linkedin, href: "#", label: "LinkedIn", color: "hover:text-blue-400" },
-                    { icon: Mail, href: "#", label: "Email", color: "hover:text-[#22D3EE]" },
+                    { icon: Twitter, href: "#", label: "Email", color: "hover:text-[#22D3EE]" },
+                    { icon: Instagram, href: "#", label: "Instagram", color: "hover:text-[#22D3EE]" },
                   ].map(({ icon: Icon, href, label, color }) => (
                     <a
                       key={label}
@@ -133,7 +134,7 @@ export default function ContactSection() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                    Name
+                    Nombre
                   </label>
                   <input
                     type="text"
@@ -149,7 +150,7 @@ export default function ContactSection() {
 
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                    Email
+                    Correo electrónico
                   </label>
                   <input
                     type="email"
@@ -159,13 +160,13 @@ export default function ContactSection() {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:border-[#22D3EE] focus:ring-1 focus:ring-[#22D3EE] focus:outline-none transition-colors duration-300"
-                    placeholder="your.email@example.com"
+                    placeholder="tu.correo@ejemplo.com"
                   />
                 </div>
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                    Message
+                    Mensaje
                   </label>
                   <textarea
                     id="message"
@@ -175,7 +176,7 @@ export default function ContactSection() {
                     required
                     rows={6}
                     className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:border-[#22D3EE] focus:ring-1 focus:ring-[#22D3EE] focus:outline-none transition-colors duration-300 resize-none"
-                    placeholder="Tell me about your project..."
+                    placeholder="Hablame de tu idea..."
                   />
                 </div>
 
@@ -183,7 +184,7 @@ export default function ContactSection() {
                   type="submit"
                   className="group w-full px-8 py-4 bg-gradient-to-r from-[#22D3EE] to-[#8B5CF6] rounded-lg text-white font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#22D3EE]/25 flex items-center justify-center space-x-2"
                 >
-                  <span>Send Message</span>
+                  <span>Contactar</span>
                   <Send size={20} className="group-hover:translate-x-1 transition-transform duration-300" />
                 </button>
               </form>

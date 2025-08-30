@@ -26,58 +26,75 @@ export default function ProjectsSection() {
 
   const projects = [
     {
-      title: "E-Commerce Platform",
+      title: "SUIM",
       description:
-        "A modern e-commerce platform built with Next.js, featuring real-time inventory, payment processing, and admin dashboard.",
-      image: "/placeholder.svg?height=300&width=500",
-      tech: ["Next.js", "TypeScript", "Stripe", "PostgreSQL"],
+        "Sistema Universal de Información Médica, es una plataforma creada con VueJs, SVG.Js y Cornerstone donde se puede gestionar el Expediente Clinico Electrónico de los usuarios, asi como la gestión de imagenes medicas, estudios de laboratorios, signos vitales entre otros módulos",
+      image: "",
+      tech: ["VueJs", "JavaScript", "Vuetify", "Axios", "Git", "HTML", "CSS", "Cornerstone", "SVG.js"],      
+      live: "https://erillamhc.com/",
+    },
+    {
+      title: "Portafolio",
+      description:
+        "Página web moderna, creada con NuxtJs para mostrar proyectos, experiencia y tener contacto con clientes por medio de un portafolio web",
+      image: "",
+      tech: ["VueJs", "DaisyUI", "TailwindCSS", "NuxtJs", "Git", "HTML", "JavaScript"],
+      github: "https://github.com/JesusRafaelNavaCruz/portafolio",
+      live: "https://jesusrafaelnavacruz.vercel.app/",
+    },
+    {
+      title: "API Rest Sistema de Inventario",
+      description:
+        "API Rest creada para la gestión de inventario de activos",
+      image: "",
+      tech: ["TypeScript", "Mongo DB", "NestJs", "SwaggerUI"],
       github: "#",
       live: "#",
     },
     {
-      title: "Task Management App",
+      title: "Sistema de inventario",
       description:
-        "Collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      image: "/placeholder.svg?height=300&width=500",
-      tech: ["React", "Node.js", "Socket.io", "MongoDB"],
+        "Plataforma para la gestión de inventario de activos",
+      image: "",
+      tech: ["React", "TypeScript", "TailwindCSS", "Redux", "Formik", "Yup"],
       github: "#",
       live: "#",
     },
     {
-      title: "Weather Dashboard",
-      description:
-        "Beautiful weather dashboard with location-based forecasts, interactive maps, and customizable widgets.",
-      image: "/placeholder.svg?height=300&width=500",
-      tech: ["Vue.js", "D3.js", "OpenWeather API", "Tailwind"],
-      github: "#",
-      live: "#",
-    },
-    {
-      title: "Portfolio Website",
-      description:
-        "A creative portfolio website for a digital artist, featuring smooth animations and an immersive gallery experience.",
-      image: "/placeholder.svg?height=300&width=500",
-      tech: ["React", "Framer Motion", "Three.js", "Sanity"],
-      github: "#",
-      live: "#",
-    },
-    {
-      title: "Learning Platform",
+      title: "Slider nativo",
       description:
         "Interactive learning platform with video courses, progress tracking, and community features for developers.",
-      image: "/placeholder.svg?height=300&width=500",
+      image: "",
       tech: ["Next.js", "Prisma", "Supabase", "Stripe"],
       github: "#",
-      live: "#",
+      live: "https://uiverse.io/JesusRafaelNavaCruz/soft-cat-28",
     },
     {
-      title: "Analytics Dashboard",
+      title: "Loader",
       description:
         "Real-time analytics dashboard for SaaS applications with customizable charts and data visualization.",
-      image: "/placeholder.svg?height=300&width=500",
+      image: "",
       tech: ["React", "Chart.js", "Express", "Redis"],
       github: "#",
-      live: "#",
+      live: "https://uiverse.io/JesusRafaelNavaCruz/chilly-vampirebat-53",
+    },
+    {
+      title: "Button Frenzy: Tailwind Challenge",
+      description:
+        "Real-time analytics dashboard for SaaS applications with customizable charts and data visualization.",
+      image: "",
+      tech: ["React", "Chart.js", "Express", "Redis"],
+      github: "#",
+      live: "https://uiverse.io/JesusRafaelNavaCruz/modern-robin-64",
+    },
+    {
+      title: "Button Glitch: Tailwind Challenge",
+      description:
+        "Real-time analytics dashboard for SaaS applications with customizable charts and data visualization.",
+      image: "",
+      tech: ["React", "Chart.js", "Express", "Redis"],
+      github: "#",
+      live: "https://uiverse.io/JesusRafaelNavaCruz/modern-robin-64",
     },
   ]
 
@@ -91,11 +108,11 @@ export default function ProjectsSection() {
         >
           <h2 className="text-4xl sm:text-5xl font-bold text-center mb-4">
             <span className="bg-gradient-to-r from-[#22D3EE] to-[#8B5CF6] bg-clip-text text-transparent">
-              Proyectos
+              Mi Portafolio
             </span>
           </h2>
           <p className="text-gray-400 text-center mb-16 max-w-2xl mx-auto">
-            A collection of projects that showcase my skills and passion for creating exceptional digital experiences.
+            Una muestra de mi trabajo. Aquí encontrarás una selección de los proyectos más relevantes que he creado.
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -111,7 +128,7 @@ export default function ProjectsSection() {
               >
                 <div className="relative overflow-hidden">
                   <Image
-                    src={project.image || "/placeholder.svg"}
+                    src={project.image || "/assets/500x300.png"}
                     alt={project.title}
                     width={500}
                     height={300}
@@ -129,13 +146,14 @@ export default function ProjectsSection() {
                       hoveredProject === index ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-2"
                     }`}
                   >
-                    <a
+                    {project && project.github ? (<a
                       href={project.github}
                       className="p-2 bg-gray-900/80 rounded-full text-white hover:bg-[#22D3EE] transition-colors duration-200"
                       aria-label="View GitHub repository"
                     >
                       <Github size={16} />
-                    </a>
+                    </a>) : null }
+                    
                     <a
                       href={project.live}
                       className="p-2 bg-gray-900/80 rounded-full text-white hover:bg-[#8B5CF6] transition-colors duration-200"
@@ -169,7 +187,7 @@ export default function ProjectsSection() {
 
           <div className="text-center mt-12">
             <button className="px-8 py-4 border-2 border-[#22D3EE] text-[#22D3EE] rounded-full font-semibold hover:bg-[#22D3EE] hover:text-[#121212] transition-all duration-300 hover:scale-105">
-              View All Projects
+              Ver todos los proyectos
             </button>
           </div>
         </div>

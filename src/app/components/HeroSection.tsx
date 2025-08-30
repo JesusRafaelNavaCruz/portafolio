@@ -36,7 +36,7 @@ export default function HeroSection() {
           }`}
         >
           <h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold mb-6">
-            <Typewritter words={["lorem", "lorem", "lorem"]} />
+            <Typewritter words={["Soluciones", "Innovación", "Código"]} />
           </h1>
 
           <div
@@ -47,12 +47,10 @@ export default function HeroSection() {
             }`}
           >
             <p className="text-xl sm:text-2xl lg:text-3xl text-gray-300 mb-8 font-light">
-              Lorem ipsum dolor sit amet.
+              Doy vida a tus proyectos con código y creatividad.
             </p>
             <p className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia
-              debitis atque officiis magni quibusdam eius aspernatur
-              exercitationem similique voluptate harum!
+              Mi objetivo es crear productos digitales que no solo funcionen, sino que también inspiren y conecten.
             </p>
           </div>
         </div>
@@ -66,7 +64,7 @@ export default function HeroSection() {
               onClick={() => scrollToSection("projects")}
               className="group relative px-8 py-4 bg-gradient-to-r from-[#22D3EE] to-[#8B5CF6] rounded-full text-white font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#22D3EE]/25"
             >
-              <span className="relative z-10">Ver proyectos</span>
+              <span className="relative z-10">Explorar Portafolio</span>
               <div className="absolute inset-0 bg-gradient-to-r from-[#8B5CF6] to-[#22D3EE] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </button>
 
@@ -74,7 +72,7 @@ export default function HeroSection() {
               onClick={() => scrollToSection("contact")}
               className="px-8 py-4 border-2 border-[#22D3EE] text-[#22D3EE] rounded-full font-semibold text-lg transition-all duration-300 hover:bg-[#22D3EE] hover:text-[#121212] hover:scale-105"
             >
-              Contactame
+              Hablemos
             </button>
           </div>
 
@@ -98,7 +96,7 @@ export default function HeroSection() {
         </div>
          {/* Scroll Indicator */}
         <div
-          className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 transition-all duration-1000 delay-1000 ${
+          className={`absolute left-1/2 transform -translate-x-1/2 transition-all duration-1000 delay-1000 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >

@@ -16,7 +16,7 @@ export default function AboutSection() {
       { threshold: 0.3 }
     );
 
-    const element = document.getElementById("about");
+    const element = document.getElementById("aboutme");
     if (element) observer.observe(element);
 
     return () => observer.disconnect();
@@ -44,7 +44,7 @@ export default function AboutSection() {
         >
           <h2 className="text-4xl sm:text-5xl font-bold text-center mb-16">
             <span className="bg-gradient-to-r from-[#22D3EE] to-[#8B5CF6] bg-clip-text text-transparent">
-              Sobre me
+              Sobre mí
             </span>
           </h2>
 
@@ -80,7 +80,7 @@ export default function AboutSection() {
             >
               <div className="space-y-6">
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  Soy un apasionadodesarrollador Frontend con experiencia en la
+                  Soy un apasionado desarrollador Frontend con experiencia en la
                   creación de interfaces modernas y funcionales. Trabajo con
                   JavaScript, React, Vue, Nuxt.js, Tailwind CSS y Node.js,
                   aplicando buenas prácticas para lograr proyectos escalables y
